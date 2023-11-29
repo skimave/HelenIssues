@@ -8,7 +8,13 @@ Motivation to create this rose when one morning I almost had a cold shower and I
 
 ## Usage
 
-Simply input your coordinates of interest in the config.py file based on the sample and run the script.
+Simply input your coordinates of interest in the config.py file based on the sample and run the script, and also create an application token in Pushover to receive notifications and insert also your user token for Pushover. The requirements.txt contains the necessary dependencies. As usual, it is recommended to run this in a venv to prevent messing up the local Python installation.
+
+### Running in cron
+
+Running this in cron could be achieved by the following entry. Considering 5 am would be an optimal time to run this script:
+
+`0 5 * * * /path/to/VENV/bin/python /path/to/your_script.py >/dev/null 2>&1`
 
 ## Known issues
 
