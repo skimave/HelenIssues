@@ -44,7 +44,7 @@ def main():
         point = Point(latitude, longitude)
         geometry = feature['geometry']
         bbox_coordinates = geometry['bbox']
-        pagelink = 'https://www.helen.fi/' + feature['properties']['pageLink']
+        pagelink = 'https://www.helen.fi' + feature['properties']['pageLink']
         pagelink = urllib.parse.quote(pagelink, safe=':/?&=')
         #Splitting for the convenience because sometimes the timestamp from Helen is included and sometimes it isn't
         startdate = feature['properties']['startDate'].split(' ')[0]
