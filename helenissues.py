@@ -26,9 +26,9 @@ def is_today_between(start_date, end_date):
     end_date = datetime.strptime(end_date, "%d.%m.%Y").date()
 
     if start_date <= current_date <= end_date:
-        return "Today there will be a remote heating maintenance in your area. "
+        return "Today there will be a district heating maintenance in your area. "
     if start_date <= tomorrow_date <= end_date:
-        return "Tomorrow there will be a remote heating maintenance in your area. "
+        return "Tomorrow there will be a district heating maintenance in your area. "
 
 def get_disruptions():
     url = 'https://www.helen.fi/mapapi/disruptions'
