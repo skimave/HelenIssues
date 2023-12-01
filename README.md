@@ -16,6 +16,15 @@ Running this in cron could be achieved by the following entry. Considering 5 am 
 
 `0 5 * * * /path/to/VENV/bin/python /path/to/your_script.py >/dev/null 2>&1`
 
+## Screenshots
+
+
+
+Notification view        |  Detailed view
+:-------------------------:|:-------------------------:
+![](screenshots/lockscreen_helenissues.jpg)   |  ![](screenshots/detailed_helenissues.jpg)
+
+
 ## Known issues
 
 In tightly packed districts there is a small chance that checking a GPS coordinate against provided GeoJSON bounding box instead of a Polygon/Multipolygon. However due to how the API provides the different kinds of polygons, a bounding box is instead preferred.
