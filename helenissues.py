@@ -50,6 +50,14 @@ def main():
         startdate = feature['properties']['startDate'].split(' ')[0]
         enddate = feature['properties']['endDate'].split(' ')[0]
 
+
+        # Intended to handle changed schedules
+        if 'newEndDate' in feature['properties'] and feature['properties'].get('newEndDate') is not None:
+            enddate = feature['properties']['newEndDate'].split(' ')[0]
+
+        if 'newStartDate' in feature['properties'] and feature['properties'].get('newStartDate') is not None:
+            startdate = feature['properties']['newStartDate'].split(' ')[0]     
+
         #Note: tuple unpacking with *
         bbox = box(*bbox_coordinates)
         is_contained = bbox.contains(point)
